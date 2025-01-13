@@ -152,7 +152,6 @@ if (birthYear < 2000) {
 }
 
 console.log(century);
-*/
 
 //Type Conversion
 const inputYear = '1991';
@@ -174,3 +173,36 @@ console.log('23' / '2');
 let n = '1' + 1; // '11'
 n = n - 1; // 10
 console.log(n);
+
+*/
+
+// Falsy Value: 0, '', undefined, null, NaN
+// Every other value will be Truthy i.e. will be True when converted to a Boolean
+
+console.log(Boolean(0));
+console.log(Boolean(undefined));
+console.log(Boolean('Jonas'));
+console.log(Boolean({}));
+console.log(Boolean(''));
+
+// When does JS do type coercion to Booleans?
+// 2 cases: 
+// 1. when using logical operators
+// 2. in a logical context like the condition of if/else statement
+
+const money = 10;
+
+if (money) {
+    console.log(`Don't spend it all 😉`)
+} else {
+    console.log(`You should get a job!`)
+};
+
+let height;
+height = 0;
+if (height) {
+    console.log(`Yay! Height is defined`)
+} else {
+    console.log(`Height is UNDEFINED`)
+};
+// issue when checking if number variables are defined: 0 is a falsy value, so if the value of a variable is 0 you might mistakenly believe that the variable is undefined.
